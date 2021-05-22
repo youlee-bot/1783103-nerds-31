@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>HTML Academy: Нёрдс</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">
+                    Nёrds
+                </a>
+                <ul>
+                    <li><a href="blank.html">Студия</a></li>
+                    <li><a href="blank.html">Клиенты</a></li>
+                    <li><a href="catalog.html">Магазин</a></li>
+                    <li><a href="blank.html">Контакты</a></li>
+                </ul>
+                <a href="blank.html"><img src="https://via.placeholder.com/15x11" width="15" height="11" alt="Иконка корзины" />Корзина</a>
+            </nav>
+        </header>
+
+        <main> 
+            <section>
+                <h2>Фильтр товаров</h2>
+                <form method="get" action="https://echo.htmlacademy.ru">
+                    <fieldset>
+                        <ul>
+                            <li>
+                                <input type="range" id="price" name="price" min="0" max="15000" />
+                            </li>
+                            <li>
+                                <input type="text" name="from" id="filter-from" value="0" />
+                                <label for="filter-from">От</label>
+                            </li>
+                            <li>
+                                <input type="text" name="to" id="filter-to" value="15000" />
+                                <label for="filter-to">До</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Сетка:</legend>
+                        <ul>
+                            <li>
+                                <input type="radio" name="adaptive" id="filter-adaptive" checked />
+                                <label for="filter-adaptive">Адаптивная</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="fixed" id="filter-fixed" />
+                                <label for="filter-fixed">Фиксированная</label>
+                            </li>
+
+                            <li>
+                                <input type="radio" name="liquid" id="filter-liquid" />
+                                <label for="filter-liquid">Резиновая</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Особенности</legend>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="slider" id="filter-slider" checked />
+                                <label for="filter-slider">Слайдер</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="block-of-features" id="filter-block-of-features" />
+                                <label for="filter-block-of-features">Блок преимуществ</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="news" id="filter-news" checked />
+                                <label for="filter-news">Новости</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="gallery" id="filter-gallery" />
+                                <label for="filter-gallery">Галлерея</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="basket" id="filter-basket" />
+                                <label for="filter-basket">Корзина</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit">Показать</button>
+                </form>
+            </section>
+
+            <section>
+                <span>Сортировать</span>
+                <ul>
+                    <li>
+                        <button type="button">По цене</button>
+                    </li>
+                    <li>
+                        <button type="button">По типу</button>
+                    </li>
+                    <li>
+                        <button type="button">По названию</button>
+                    </li>
+                    <li>
+                        <button type="button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Up" /></button>
+                    </li>
+                    <li>
+                        <button type="button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Down" /></button>
+                    </li>
+                </ul>
+                <h2>Каталог товаров</h2>
+                <ul>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                            </li>
+                            <li>
+                                <a href=""><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Изобраение товара" /></a>
+                            </li>
+                            <li>
+                                <h3>Sedona</h3>
+                                <p>Информационный сайт для туристов</p>
+                                <button type="button">9 900 ₽</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                            </li>
+                            <li>
+                                <a href=""><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Изображение товара" /></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                            </li>
+                            <li>
+                                <a href=""><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Изображение товара" /></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                            </li>
+                            <li>
+                                <a href=""><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Изображение товара" /></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                            </li>
+                            <li>
+                                <a href=""><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Изображение товара" /></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                                <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
+                            </li>
+                            <li>
+                                <a href=""><img src="https://via.placeholder.com/358x578" width="358" height="578" alt="Изображение товара" /></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">Следующая</a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <!--
+           карта
+            <section>
+            <h2>Карта</h2>
+            <img src="https://via.placeholder.com/1440x416" width="1440" height="416" alt="карта" />
+            <img src="https://via.placeholder.com/21x21" width="231" height="190" alt="логотип" />
+        </section>
+-->
+        <footer>
+            <section>
+                <h2>Давайте дружить, это выгодно!</h2>
+                <p>Скидка 10% для друзей из социальных сетей.</p>
+                <img src="https://via.placeholder.com/81x81" width="81" height="81" alt="vk" />
+                <img src="https://via.placeholder.com/81x81" width="81" height="81" alt="facebook" />
+                <img src="https://via.placeholder.com/81x81" width="81" height="81" alt="instagram" />
+            </section>
+        </footer>
+    </body>
+</html>
