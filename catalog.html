@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
     <head>
         <meta charset="utf-8" />
         <title>HTML Academy: Нёрдс</title>
-        <link rel="icon" href="favicon.ico">
-        <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="favicon/180.png">
-        <link rel="manifest" href="manifest.webmanifest">
+        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="img/favicon/180.png" />
+        <link rel="manifest" href="manifest.webmanifest" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
     </head>
-    <body>
-        <header>
-            <nav>
-                <a href="index.html">
-                    Nёrds
+    <body class="page-body">
+        <header class="main-header">
+            <nav class="main-navigation">
+                <a class="main-header-logo" href="index.html">
+                    <img src="img/logo.svg" alt="NЁRDS" width="160" height="66" />
                 </a>
-                <ul>
+                <ul class="site-navigation">
                     <li><a href="blank.html">Студия</a></li>
                     <li><a href="blank.html">Клиенты</a></li>
                     <li><a href="catalog.html">Магазин</a></li>
                     <li><a href="blank.html">Контакты</a></li>
                 </ul>
-                <a href="blank.html"><img src="https://via.placeholder.com/15x11" width="15" height="11" alt="Иконка корзины" />Корзина</a>
+                <div class="user-navigation">
+                    <a href="blank.html" class="basket-link"><img src="img/cart.svg" width="15" height="11" alt="Иконка корзины" />Корзина</a>
+                </div>
             </nav>
         </header>
 
-        <main> 
-            <section>
+        <main>
+            <section class="title">
+                <h1>Магазин готовых шаблонов</h1>
+            </section>
+            <section class="filter sort">
                 <h2>Фильтр товаров</h2>
                 <form method="get" action="https://echo.htmlacademy.ru">
                     <fieldset>
@@ -35,11 +43,11 @@
                             </li>
                             <li>
                                 <input type="text" name="from" id="filter-from" value="0" />
-                                <label for="filter-from">От</label>
+                                <label for="filter-from">ОТ</label>
                             </li>
                             <li>
                                 <input type="text" name="to" id="filter-to" value="15000" />
-                                <label for="filter-to">До</label>
+                                <label for="filter-to">ДО</label>
                             </li>
                         </ul>
                     </fieldset>
@@ -47,17 +55,17 @@
                         <legend>Сетка:</legend>
                         <ul>
                             <li>
-                                <input type="radio" name="adaptive" id="filter-adaptive" checked />
+                                <input type="radio" name="the-net" id="filter-adaptive" checked />
                                 <label for="filter-adaptive">Адаптивная</label>
                             </li>
 
                             <li>
-                                <input type="radio" name="fixed" id="filter-fixed" />
+                                <input type="radio" name="the-net" id="filter-fixed" />
                                 <label for="filter-fixed">Фиксированная</label>
                             </li>
 
                             <li>
-                                <input type="radio" name="liquid" id="filter-liquid" />
+                                <input type="radio" name="the-net" id="filter-liquid" />
                                 <label for="filter-liquid">Резиновая</label>
                             </li>
                         </ul>
@@ -88,34 +96,42 @@
                             </li>
                         </ul>
                     </fieldset>
-                    <button type="submit">Показать</button>
+                    <button type="submit" class="button gray-button">Показать</button>
                 </form>
             </section>
 
-            <section>
+            <section class="sort">
                 <span>Сортировать</span>
-                <ul>
-                    <li>
-                        <button type="button">По цене</button>
-                    </li>
-                    <li>
-                        <button type="button">По типу</button>
-                    </li>
-                    <li>
-                        <button type="button">По названию</button>
-                    </li>
-                    <li>
-                        <button type="button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Up" /></button>
-                    </li>
-                    <li>
-                        <button type="button"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Down" /></button>
-                    </li>
-                </ul>
+
+                <fieldset>
+                    <ul>
+                        <li>
+                            <input type="radio" name="sort" id="by-price" checked />
+                            <label for="by-price">По цене</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sort" id="by-type" />
+                            <label for="by-type">По типу</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sort" id="by-name" />
+                            <label for="by-name">По названию</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sort" id="by-up" />
+                            <label for="by-up"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Up" /></label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sort" id="by-down" />
+                            <label for="by-down"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Down" /></label>
+                        </li>
+                    </ul>
+                </fieldset>
                 <h2>Каталог товаров</h2>
-                <ul>
+                <ul class="catalog-content">
                     <li>
-                        <ul>
-                            <li>
+                        <ul class="product-container">
+                            <li class="hovered">
                                 <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
                                 <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
                                 <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="0" />
@@ -124,9 +140,9 @@
                                 <a href=""><img src="img/catalog/img-sedona.jpg" width="358" height="578" alt="Изобраение товара" /></a>
                             </li>
                             <li>
-                                <h3>Sedona</h3>
-                                <p>Информационный сайт для туристов</p>
-                                <button type="button">9 900 ₽</button>
+                                <p class="catalog-title">Sedona</p>
+                                <p class="description">Информационный сайт для туристов</p>
+                                <button type="button" class="button">9 900 ₽</button>
                             </li>
                         </ul>
                     </li>
@@ -139,6 +155,11 @@
                             </li>
                             <li>
                                 <a href=""><img src="img/catalog/img-pink.jpg" width="358" height="578" alt="Изображение товара" /></a>
+                            </li>
+                            <li>
+                                <p class="catalog-title">Pink app</p>
+                                <p class="description">Продуктовый лендинг приложения для iOS и Android</p>
+                                <button type="button" class="button">9 900 ₽</button>
                             </li>
                         </ul>
                     </li>
@@ -191,37 +212,56 @@
                         </ul>
                     </li>
                 </ul>
-                <ul>
+                <ul class="pagination">
                     <li>
-                        <a href="">1</a>
+                        <a href="" class="gray-button current">1</a>
                     </li>
                     <li>
-                        <a href="#">2</a>
+                        <a href="#" class="gray-button">2</a>
                     </li>
                     <li>
-                        <a href="#">3</a>
+                        <a href="#" class="gray-button">3</a>
                     </li>
                     <li>
-                        <a href="#">Следующая</a>
+                        <a href="#" class="gray-button">Следующая</a>
                     </li>
                 </ul>
             </section>
+
+            <section class="contacts">
+                <h2>Контакты</h2>
+                <h3>NЁRDS DESIGN STUDIO</h3>
+                <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург <a href="tel:+78005558628">+7 800 555-86-28</a></p>
+                <button type="button" class="button contacts-button">Напишите нам</button>
+            </section>
+
+            <section class="modal contacts-form">
+                <form action="https://echo.htmlacademy.ru" method="POST">
+                    <h2>Форма контактов</h2>
+                    <h3>Напишите нам</h3>
+
+                    <label> Ваше имя:<input id="name" type="text" value="Имя Фамилия" /> </label>
+                    <label> Ваш email: <input id="email" type="email" value="email@example.com" /> </label>
+                    <label> Текст письма: <input id="text" type="text" value="В свободной форме" /> </label>
+                    <input type="submit" class="button" value="отправить" />
+                </form>
+                <button class="modal-close" type="button">Закрыть</button>
+            </section>
+
+            <section class="map">
+                <h2>Карта</h2>
+                <img src="img/map.jpg" width="1440" height="416" alt="карта" class="map-image" />
+                <img src="img/map-marker.png" width="231" height="190" alt="логотип" class="map-logo" />
+            </section>
         </main>
 
-       
-        <section>
-            <h2>Карта</h2>
-            <img src="img/map.jpg" width="1440" height="416" alt="карта" />
-            <img src="img/map-marker.png" width="231" height="190" alt="логотип" />
-        </section>
-
-        <footer>
-            <section>
+        <footer class="main-footer">
+            <section class="footer-content">
                 <h2>Давайте дружить, это выгодно!</h2>
                 <p>Скидка 10% для друзей из социальных сетей.</p>
-                <img src="https://via.placeholder.com/81x81" width="81" height="81" alt="vk" />
-                <img src="https://via.placeholder.com/81x81" width="81" height="81" alt="facebook" />
-                <img src="https://via.placeholder.com/81x81" width="81" height="81" alt="instagram" />
+                <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="vk" /></a>
+                <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="facebook" /></a>
+                <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="instagram" /></a>
             </section>
         </footer>
     </body>

@@ -28,6 +28,10 @@
 	--special:#666666;
 	--basic-input-border:#D7DCDE;
 	--basic-input-border-hover: #B4B9BB;
+	--basic-catalog-filter:#283136;
+	--basic-gray-button-hover: #DFDFDF;
+	--basic-gray-button-pushed:#D5D5D5;
+	--basic-content-header-hover:#4D4D4D;
  }
 
  body{
@@ -64,7 +68,9 @@
 .site-navigation,
 .services-list,
 .about-list,
-.customers-list
+.customers-list,
+.catalog-content,
+.product-container
 {
 	list-style: none;
 	margin: 0;
@@ -82,6 +88,9 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	color:var(--basic-black);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 30px;
 }
 
 .main-navigation a:hover,
@@ -160,6 +169,7 @@ a.title:active{
 }
 .features h2{
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
 /*about*/
@@ -202,9 +212,9 @@ a.title:active{
 /*contacts form*/
 
 .contacts-form h3{
-	font-weight: bold;
-	font-size: 45px;
-	line-height: 53px;
+font-weight: bold;
+font-size: 18px;
+line-height: 30px;
 }
 
 .contacts-form input[type="text"],
@@ -236,4 +246,81 @@ a.title:active{
 }
 .footer-content p{
 	color: var(--basic-dark-gray);
+}
+
+/*catalog page*/
+/*main content*/
+/*title*/
+.title h1{
+	font-weight: 500;
+	font-size: 55px;
+	line-height: 55px;
+	text-align: center;
+}
+/*filter*/
+
+.filter legend{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+}
+.filter label{
+	font-size: 16px;
+	line-height: 20px;
+	color:var(--basic-catalog-filter);
+}
+
+.gray-button{
+	background-color: var(--basic-medium-gray);
+	color:var(--basic-black);
+}
+
+.gray-button:hover{
+	background-color: var(--basic-gray-button-hover);
+}
+
+.gray-button:active{
+	background-color: var(--basic-gray-button-pushed);
+	opacity: 0.3;
+}
+
+/*sort*/
+
+.sort{
+	color:var(--basic-black)
+}
+
+.sort input[type="radio"]:not(:checked)+label,
+.sort input[type="checkbox"]:not(:checked)+label{
+	opacity:0.3;
+}
+
+.sort input[type="radio"]:hover+label{
+opacity:0.6;
+}
+
+/*catalog*/
+.catalog-title{
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.description{
+	font-size: 16px;
+	line-height: 18px;
+	text-align: center;
+	color: var(--special);
+}
+
+.hovered{
+	background-color:var(--basic-content-header-hover);
+}
+
+/*pagination*/
+.current{
+	background-color:var(--basic-white);
 }
