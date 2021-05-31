@@ -3,14 +3,14 @@
 	font-style: normal;
 	font-weight: 400;
 
-	src: local(''),
-		  url('fonts/roboto.woff2') format('woff2'),
-		  url('fonts/roboto.woff') format('woff'),
+	src: local('Roboto'),
+		  url('../fonts/roboto.woff2') format('woff2'),
+		  url('../fonts/roboto.woff') format('woff'),
  }
 
 /* Variables */
 
-:root {
+:root{
 	--basic-white:#FFFFFF;
 	--basic-gray: #888888;
 	--basic-red: #FB565A;
@@ -30,7 +30,7 @@
 	--basic-input-border-hover: #B4B9BB;
  }
 
- body {
+ body{
 	min-width: 1440px;
 	margin: 0;
 	padding: 0;
@@ -60,21 +60,28 @@
 	background-color: var(--basic-push-button-red);
 }
 
+/*lists*/
+.site-navigation,
+.services-list,
+.about-list,
+.customers-list
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
  /*header*/
 
 .main-header{
 	background-color:var(--basic-medium-gray);
 }
+
 .main-navigation a,
 .user-navigation a{
 	text-decoration: none;
 	text-transform: uppercase;
 	color:var(--basic-black);
-}
-
-
-.site-navigation{
-	list-style: none;
 }
 
 .main-navigation a:hover,
@@ -103,10 +110,6 @@
 }
 
 /*services*/
-.services-list{
-	list-style: none;
-}
-
 .services-list h3{
 	font-weight: bold;
 	font-size: 24px;
@@ -125,8 +128,7 @@ a.title:active{
 	opacity: 0.3;
 }
 
-.green-button
-{
+.green-button{
 	background-color: var(--basic-green);
 }
 
@@ -161,10 +163,6 @@ a.title:active{
 }
 
 /*about*/
-.about-list{
-	list-style: none;
-}
-
 .about h3{
 	font-weight: bold;
 	font-size: 45px;
@@ -172,9 +170,6 @@ a.title:active{
 }
 
 /*customers*/
-.customers-list{
-	list-style: none;
-}
 .customers-list img{
 	opacity:0.2;
 }
@@ -222,7 +217,7 @@ a.title:active{
 	border: 2px solid var(--basic-input-border-hover);
 }
 
-.contacts-form input:active{
+.contacts-form input:focus{
 	border: 2px solid var(--basic-black);
 	opacity: 1;
 }
