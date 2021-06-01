@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
     <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
         <meta charset="utf-8" />
         <title>HTML Academy: Нёрдс</title>
-        <link rel="icon" href="favicon.ico">
-        <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="img/favicon/180.png">
-        <link rel="manifest" href="manifest.webmanifest">
-		  <link rel="stylesheet" href="css/normalize.css">
-		  <link rel="stylesheet" href="css/style.css">
-		  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="img/favicon/180.png" />
+        <link rel="manifest" href="manifest.webmanifest" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
     </head>
     <body class="page-body">
         <header class="main-header">
             <nav class="main-navigation">
                 <a class="main-header-logo">
-                    <img src="img/logo.svg" alt="NЁRDS" width="160" height="66">
+                    <img src="img/logo.svg" alt="NЁRDS" width="160" height="66" />
                 </a>
                 <ul class="site-navigation">
                     <li><a href="blank.html">Студия</a></li>
@@ -23,17 +23,16 @@
                     <li><a href="catalog.html">Магазин</a></li>
                     <li><a href="blank.html">Контакты</a></li>
                 </ul>
-					 <div class="user-navigation">
-						 <a href="blank.html" class="basket-link"><img src="img/cart.svg" width="15" height="11" alt="Иконка корзины" />Корзина</a>
-					 </div>
+                <div class="user-navigation">
+                    <a href="blank.html" class="basket-link"><img src="img/cart.svg" width="15" height="11" alt="Иконка корзины" />Корзина</a>
+                </div>
             </nav>
         </header>
 
         <main class="container">
-
             <section class="slider">
-					<h2>Слайдер</h2>
-               <h3>Долго, дорого, скрупулезно.</h3>
+                <h2>Слайдер</h2>
+                <h3>Долго, дорого, скрупулезно.</h3>
                 <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
                 <a href="blank.html" class="button">Узнать больше</a>
 
@@ -61,23 +60,22 @@
                         <a href="blank.html" class="button">Заказать</a>
                     </li>
 
-						  <li class="services-item">
-
+                    <li class="services-item">
                         <h3><a href="blank.html" class="title">Приложения</a></h3>
-								<p>
+                        <p>
                             <a href="blank.html"><img src="img/apps.jpg" width="300" height="146" alt="Приложения" /></a>
-								</p>
+                        </p>
                         <p>
                             Покорите топ-10 приложений AppStore и Google Play
                         </p>
                         <a href="blank.html" class="button green-button">Заказать</a>
                     </li>
 
-						  <li class="services-item">
+                    <li class="services-item">
                         <h3><a href="blank.html" class="title">Презентации</a></h3>
                         <p>
-								<a href="blank.html"><img src="img/presentations.jpg" width="300" height="146" alt="Презентации" /></a>
-								</p>
+                            <a href="blank.html"><img src="img/presentations.jpg" width="300" height="146" alt="Презентации" /></a>
+                        </p>
                         <p>
                             Вы даже не подозреваете, насколько вы изумительны!
                         </p>
@@ -130,10 +128,10 @@
                     <li class="customers-item">
                         <img src="img/logo_htmlacademy.png" width="209" height="90" alt="htmlacademy" />
                     </li>
-						  <li class="customers-item">
+                    <li class="customers-item">
                         <img src="img/logo_borodinski.png" width="209" height="90" alt="Borodinski" />
                     </li>
-						  <li class="customers-item">
+                    <li class="customers-item">
                         <img src="img/logo_pink.png" width="185" height="52" alt="pink" />
                     </li>
                     <li>
@@ -149,45 +147,34 @@
                 <button type="button" class="button contacts-button">Напишите нам</button>
             </section>
 
+            <section class="modal contacts-form">
+                <form action="https://echo.htmlacademy.ru" method="POST">
+                    <h2>Форма контактов</h2>
+                    <h3>Напишите нам</h3>
 
-				<section class="modal contacts-form">
-					<form action="https://echo.htmlacademy.ru" method="POST">
-						<h2>Форма контактов</h2>
-							<h3>Напишите нам</h3>
+                    <label> Ваше имя:<input id="name" type="text" value="Имя Фамилия" /> </label>
+                    <label> Ваш email: <input id="email" type="email" value="email@example.com" /> </label>
+                    <label> Текст письма: <input id="text" type="text" value="В свободной форме" /> </label>
+                    <input type="submit" class="button" value="отправить" />
+                </form>
+                <button class="modal-close" type="button">Закрыть</button>
+            </section>
 
-						<label>
-							Ваше имя:<input id="name" type="text" value="Имя Фамилия">
-						</label>
-						<label>
-							Ваш email: <input id="email" type="email" value="email@example.com">
-						</label>
-						<label>
-							Текст письма: <input id="text" type="text" value="В свободной форме">
-						</label>
-						<input type="submit" class="button" value="отправить">
-					</form>
-					<button class="modal-close" type="button">Закрыть</button>
-				</section>
-
-
-        <section class="map">
-          <h2>Карта</h2>
-          <img src="img/map.jpg" width="1440" height="416" alt="карта" class="map-image"/>
-          <img src="img/map-marker.png" width="231" height="190" alt="логотип" class="map-logo"/>
-        </section>
-
+            <section class="map">
+                <h2>Карта</h2>
+                <img src="img/map.jpg" width="1440" height="416" alt="карта" class="map-image" />
+                <img src="img/map-marker.png" width="231" height="190" alt="логотип" class="map-logo" />
+            </section>
         </main>
 
         <footer class="main-footer">
-
-        <section class="footer-content">
-          <h2>Давайте дружить, это выгодно!</h2>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
-          <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="vk" /></a>
-          <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="facebook" /></a>
-          <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="instagram" /></a>
-        </section>
-
-         </footer>
+            <section class="footer-content">
+                <h2>Давайте дружить, это выгодно!</h2>
+                <p>Скидка 10% для друзей из социальных сетей.</p>
+                <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="vk" /></a>
+                <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="facebook" /></a>
+                <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="instagram" /></a>
+            </section>
+        </footer>
     </body>
 </html>
