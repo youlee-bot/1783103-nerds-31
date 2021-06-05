@@ -14,41 +14,52 @@
     <body class="page-body">
         <header class="main-header">
             <nav class="main-navigation">
-                <a class="main-header-logo">
-                    <img src="img/logo.svg" alt="NЁRDS" width="160" height="66" />
-                </a>
-                <ul class="site-navigation">
-                    <li><a href="blank.html">Студия</a></li>
-                    <li><a href="blank.html">Клиенты</a></li>
-                    <li><a href="catalog.html">Магазин</a></li>
-                    <li><a href="blank.html">Контакты</a></li>
-                </ul>
-                <div class="user-navigation">
-                    <a href="blank.html" class="basket-link"><img src="img/cart.svg" width="15" height="11" alt="Иконка корзины" />Корзина</a>
+                <div class="main-header-navigation center">
+                    <div class="header-logo">
+                        <a class="main-header-logo">
+                            <img src="img/logo.svg" alt="NЁRDS" width="160" height="66" />
+                        </a>
+                    </div>
+                    <div class="header-menu">
+                        <ul class="site-navigation">
+                            <li><a href="blank.html">Студия</a></li>
+                            <li><a href="blank.html">Клиенты</a></li>
+                            <li><a href="catalog.html">Магазин</a></li>
+                            <li><a href="blank.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="user-navigation">
+                        <a href="blank.html" class="basket-link"><img src="img/cart.svg" width="15" height="11" alt="Иконка корзины" />Корзина</a>
+                    </div>
                 </div>
             </nav>
         </header>
 
         <main class="container">
             <section class="slider">
-                <h2>Слайдер</h2>
-                <h3>Долго, дорого, скрупулезно.</h3>
-                <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
-                <a href="blank.html" class="button">Узнать больше</a>
-
-                <figure class="slider-content">
-                    <a href="#">
-                        <img src="img/slide1.png" width="760" height="431" alt="Слайдер" />
-                    </a>
-                </figure>
-                <button type="button" disabled>1</button>
-                <button type="button">2</button>
-                <button type="button">3</button>
+                <div class="slider-container center">
+                    <div class="slider-description">
+                        <h2>Слайдер</h2>
+                        <h3>Долго, дорого, скрупулезно.</h3>
+                        <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+                        <a href="blank.html" class="button">Узнать больше</a>
+                    </div>
+                    <div class="slider-pic">
+                        <figure class="slider-content">
+                            <a href="#">
+                                <img src="img/slide1.png" width="760" height="431" alt="Слайдер" />
+                            </a>
+                        </figure>
+                        <button type="button" disabled>1</button>
+                        <button type="button">2</button>
+                        <button type="button">3</button>
+                    </div>
+                </div>
             </section>
 
             <section class="services">
                 <h2>Предоставляемые услуги</h2>
-                <ul class="services-list">
+                <ul class="services-list center">
                     <li class="services-item">
                         <h3><a href="blank.html" class="title">Вебсайты</a></h3>
                         <p>
@@ -84,47 +95,48 @@
                 </ul>
             </section>
 
-            <section class="features">
-                <h1>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h1>
-                <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчетпревыше креатива. Работаем не покладая рук, как роботы.</p>
-                <h2>Выполняем заказы на разработку:</h2>
+            <div class="features-container center">
+                <section class="features">
+                    <h1>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h1>
+                    <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчетпревыше креатива. Работаем не покладая рук, как роботы.</p>
+                    <h2>Выполняем заказы на разработку:</h2>
 
-                <ul class="features-list">
-                    <li class="features-item">
-                        Веб-сайтов любой сложности
-                    </li>
-                    <li class="features-item">
-                        Мобильных приложений для iOS и Android
-                    </li>
-                    <li class="features-item">
-                        Слайдшоу и видео для корпоративных презентаций
-                    </li>
-                </ul>
-            </section>
+                    <ul class="features-list">
+                        <li class="features-item">
+                            Веб-сайтов любой сложности
+                        </li>
+                        <li class="features-item">
+                            Мобильных приложений для iOS и Android
+                        </li>
+                        <li class="features-item">
+                            Слайдшоу и видео для корпоративных презентаций
+                        </li>
+                    </ul>
+                </section>
 
-            <section class="about">
-                <h2>О компании</h2>
-                <img src="img/nerds-illustration.jpg" width="360" height="208" alt="О компании" />
-                <p><strong>с 2004 года Любим точность во всем:</strong></p>
-                <ul class="about-list">
-                    <li class="about-item">
-                        <h3>146%</h3>
-                        <p>Уровень самоотдачи</p>
-                    </li>
-                    <li class="about-item">
-                        <h3>100%</h3>
-                        <p>Соблюдение сроков</p>
-                    </li>
-                    <li class="about-item">
-                        <h3>50%</h3>
-                        <p>Минимальная предоплата</p>
-                    </li>
-                </ul>
-            </section>
-
+                <section class="about">
+                    <h2>О компании</h2>
+                    <img src="img/nerds-illustration.jpg" width="360" height="208" alt="О компании" />
+                    <p><strong>с 2004 года Любим точность во всем:</strong></p>
+                    <ul class="about-list">
+                        <li class="about-item">
+                            <h3>146%</h3>
+                            <p>Уровень самоотдачи</p>
+                        </li>
+                        <li class="about-item">
+                            <h3>100%</h3>
+                            <p>Соблюдение сроков</p>
+                        </li>
+                        <li class="about-item">
+                            <h3>50%</h3>
+                            <p>Минимальная предоплата</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
             <section class="customers">
                 <h2>Клиенты</h2>
-                <ul class="customers-list">
+                <ul class="customers-list center">
                     <li class="customers-item">
                         <img src="img/logo_htmlacademy.png" width="209" height="90" alt="htmlacademy" />
                     </li>
@@ -169,11 +181,17 @@
 
         <footer class="main-footer">
             <section class="footer-content">
-                <h2>Давайте дружить, это выгодно!</h2>
-                <p>Скидка 10% для друзей из социальных сетей.</p>
-                <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="vk" /></a>
-                <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="facebook" /></a>
-                <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="instagram" /></a>
+                <div class="footer-container center">
+                    <div class="footer-social">
+                        <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="vk" /></a>
+                        <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="facebook" /></a>
+                        <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="instagram" /></a>
+                    </div>
+                    <div class="footer-text">
+                        <h2>Давайте дружить, это выгодно!</h2>
+                        <p>Скидка 10% для друзей из социальных сетей.</p>
+                    </div>
+                </div>
             </section>
         </footer>
     </body>

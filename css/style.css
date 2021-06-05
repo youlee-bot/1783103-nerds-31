@@ -44,7 +44,11 @@
 	color: var(--basic-black);
 	background-color: var(--basic-white);
  }
+/*Grid*/
 
+.page{
+	height: 100%;
+}
  /*buttons*/
 
 .button{
@@ -77,10 +81,34 @@
 	padding: 0;
 }
 
+/*Body*/
+.page-body{
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	align-content: start;
+}
+
+.center{
+	width: 1160px;
+	margin: 0 auto;
+	padding: 0 140px;
+}
+
  /*header*/
 
 .main-header{
 	background-color:var(--basic-medium-gray);
+	margin-bottom: 0;
+}
+
+.main-header-navigation{
+	display: grid;
+	grid-template-columns: min-content 1fr min-content;
+}
+
+.main-header-logo{
+	align-content: start;
 }
 
 .main-navigation a,
@@ -107,6 +135,10 @@
 /*main content*/
 
 /*slider*/
+.slider h2{
+	display: none;
+}
+
 .slider h3{
 	font-size: 55px;
 	line-height: 55px;
@@ -118,7 +150,22 @@
 	background-color: var(--basic-medium-gray);
 }
 
+.slider-container{
+	display: grid;
+	grid-template-columns: 400px 1fr;
+}
+
 /*services*/
+.services-list{
+	display: grid;
+	grid-template-columns: 400px 400px 1fr;
+	align-content: start;
+}
+
+.services h2{
+	display:none;
+}
+
 .services-list h3{
 	font-weight: bold;
 	font-size: 24px;
@@ -162,6 +209,11 @@ a.title:active{
 }
 
 /*features*/
+.features-container{
+	display: grid;
+	grid-template-columns: 1fr 360px;
+}
+
 .features h1{
 	font-weight: 500;
 	font-size: 45px;
@@ -173,13 +225,32 @@ a.title:active{
 }
 
 /*about*/
+.about h2{
+	display: none;
+}
+
 .about h3{
 	font-weight: bold;
 	font-size: 45px;
 	line-height: 64px;
 }
 
+.about-list{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
 /*customers*/
+
+.customers h2{
+	display: none;
+}
+
+.customers-list{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .customers-list img{
 	opacity:0.2;
 }
@@ -237,13 +308,23 @@ line-height: 30px;
 	color:var(--basic-hover-button-red);
 	opacity: 1;
 }
+
 /*footer*/
+.main-footer{
+	margin-top: 68px;
+}
+
+.footer-container{
+	display: grid;
+	grid-template-columns: 388px 1fr;
+}
 
 .footer-content h2{
 	font-weight: bold;
 	font-size: 36px;
 	line-height: 36px;
 }
+
 .footer-content p{
 	color: var(--basic-dark-gray);
 }
