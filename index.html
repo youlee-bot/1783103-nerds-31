@@ -27,9 +27,9 @@
                             <li><a href="catalog.html">Магазин</a></li>
                             <li><a href="blank.html">Контакты</a></li>
                         </ul>
-                    </div>
-                    <div class="user-navigation">
-                        <a href="blank.html" class="basket-link"><img src="img/cart.svg" width="15" height="11" alt="Иконка корзины" />Корзина</a>
+                        <div class="user-navigation">
+                            <a href="blank.html" class="basket-link"><img src="img/cart.svg" width="15" height="11" alt="Иконка корзины" />Корзина</a>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -116,7 +116,7 @@
 
                 <section class="about">
                     <h2>О компании</h2>
-                    <img src="img/nerds-illustration.jpg" width="360" height="208" alt="О компании" />
+                    <img class="about-img" src="img/nerds-illustration.jpg" width="360" height="208" alt="О компании" />
                     <p><strong>с 2004 года Любим точность во всем:</strong></p>
                     <ul class="about-list">
                         <li class="about-item">
@@ -159,19 +159,6 @@
                 <button type="button" class="button contacts-button">Напишите нам</button>
             </section>
 
-            <section class="modal contacts-form">
-                <form action="https://echo.htmlacademy.ru" method="POST">
-                    <h2>Форма контактов</h2>
-                    <h3>Напишите нам</h3>
-
-                    <label> Ваше имя:<input id="name" type="text" value="Имя Фамилия" /> </label>
-                    <label> Ваш email: <input id="email" type="email" value="email@example.com" /> </label>
-                    <label> Текст письма: <input id="text" type="text" value="В свободной форме" /> </label>
-                    <input type="submit" class="button" value="отправить" />
-                </form>
-                <button class="modal-close" type="button">Закрыть</button>
-            </section>
-
             <section class="map">
                 <h2>Карта</h2>
                 <img src="img/map.jpg" width="1440" height="416" alt="карта" class="map-image" />
@@ -194,5 +181,18 @@
                 </div>
             </section>
         </footer>
+
+        <section class="modal contacts-form">
+            <form action="https://echo.htmlacademy.ru" method="POST">
+                <h2>Форма контактов</h2>
+                <h3>Напишите нам</h3>
+
+                <label> Ваше имя:<input id="name" type="text" value="Имя Фамилия" /> </label>
+                <label> Ваш email: <input id="email" type="email" value="email@example.com" /> </label>
+                <label> Текст письма: <input id="text" type="text" value="В свободной форме" /> </label>
+                <input type="submit" class="button" value="отправить" />
+            </form>
+            <button class="modal-close" type="button">Закрыть</button>
+        </section>
     </body>
 </html>
