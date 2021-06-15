@@ -21,19 +21,19 @@
                         </a>
                     </div>
                     <div class="header-menu">
-                        <ul class="site-navigation">
-                            <li><a href="blank.html">Студия</a></li>
-                            <li><a href="blank.html">Клиенты</a></li>
-                            <li><a href="catalog.html">Магазин</a></li>
-                            <li><a href="blank.html">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div class="user-navigation">
-                        <a href="blank.html" class="basket-link"><img src="img/cart.svg" width="15" height="11" alt="Иконка корзины" />Корзина</a>
-                    </div>
-                </div>
-            </nav>
-        </header>
+							<ul class="site-navigation">
+								 <li><a href="blank.html">Студия</a></li>
+								 <li><a href="blank.html">Клиенты</a></li>
+								 <li><a href="catalog.html">Магазин</a></li>
+								 <li><a href="blank.html">Контакты</a></li>
+							</ul>
+							<div class="user-navigation">
+								 <a href="blank.html" class="basket-link"><img src="img/cart.svg" width="15" height="11" alt="Иконка корзины" />Корзина</a>
+							</div>
+					  </div>
+				 </div>
+			</nav>
+	  </header>
 
         <main>
             <section class="title">
@@ -41,27 +41,28 @@
             </section>
             <div class="grid-catalog-main center">
                 <div class="grid-filter">
-                    <section class="filter catalog-main-content">
+                    <section class="filter-catalog-main-content">
                         <h2>Фильтр товаров</h2>
-                        <form method="get" action="https://echo.htmlacademy.ru">
-                            <fieldset>
-                                <ul>
+                        <form class="form-filter" method="get" action="https://echo.htmlacademy.ru">
+                            <fieldset class="price-filter">
+                                <legend>Стоимость:</legend>
+                                <ul class="price-filter">
                                     <li>
                                         <input type="range" id="price" name="price" min="0" max="15000" />
                                     </li>
                                     <li>
-                                        <input type="text" name="from" id="filter-from" value="0" />
-                                        <label for="filter-from">ОТ</label>
+													<label for="filter-from">ОТ</label>
+													<input type="text" name="from" id="filter-from" value="0" />
                                     </li>
                                     <li>
-                                        <input type="text" name="to" id="filter-to" value="15000" />
-                                        <label for="filter-to">ДО</label>
+													<label for="filter-to">ДО</label>
+													<input type="text" name="to" id="filter-to" value="15000" />
                                     </li>
                                 </ul>
                             </fieldset>
-                            <fieldset>
+                            <fieldset class="grid-type">
                                 <legend>Сетка:</legend>
-                                <ul>
+                                <ul class="grid-type">
                                     <li>
                                         <input type="radio" name="the-net" id="filter-adaptive" checked />
                                         <label for="filter-adaptive">Адаптивная</label>
@@ -79,12 +80,13 @@
                                 </ul>
                             </fieldset>
 
-                            <fieldset>
+                            <fieldset class="features-filter">
                                 <legend>Особенности</legend>
-                                <ul>
+                                <ul class="features-filter">
                                     <li>
-                                        <input type="checkbox" name="slider" id="filter-slider" checked />
-                                        <label for="filter-slider">Слайдер</label>
+
+													<input type="checkbox" name="slider" id="filter-slider" checked />
+													<label for="filter-slider">Слайдер</label>
                                     </li>
                                     <li>
                                         <input type="checkbox" name="block-of-features" id="filter-block-of-features" />
@@ -110,9 +112,10 @@
                 </div>
                 <div class="grid-content">
                     <section class="catalog-main-content">
-                        <span>Сортировать</span>
-
-                        <fieldset>
+                     <div class="flex-sort-by">
+							<span>Сортировать</span>
+							<form class="form-surt-by" method="get" action="https://echo.htmlacademy.ru"></form>
+                        <fieldset class="sort-by">
                             <ul class="sort-by">
                                 <li>
                                     <input type="radio" name="sort" id="by-price" checked />
@@ -136,6 +139,8 @@
                                 </li>
                             </ul>
                         </fieldset>
+							</form>
+							</div>
                         <h2>Каталог товаров</h2>
                         <ul class="catalog-content">
                             <li>
@@ -146,7 +151,7 @@
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                     </li>
                                     <li>
-                                        <a href=""><img src="img/catalog/img-sedona.jpg" width="358" height="578" alt="Изобраение товара" /></a>
+                                        <a href=""><img src="img/catalog/img-sedona.jpg" class="goods-image" width="358" height="578" alt="Изобраение товара" /></a>
                                     </li>
                                     <li>
                                         <p class="catalog-title">Sedona</p>
@@ -156,14 +161,14 @@
                                 </ul>
                             </li>
                             <li>
-                                <ul>
+                                <ul class="goods">
                                     <li>
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                     </li>
                                     <li>
-                                        <a href=""><img src="img/catalog/img-pink.jpg" width="358" height="578" alt="Изображение товара" /></a>
+                                        <a href=""><img src="img/catalog/img-pink.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                     <li>
                                         <p class="catalog-title">Pink app</p>
@@ -173,50 +178,50 @@
                                 </ul>
                             </li>
                             <li>
-                                <ul>
+                                <ul class="goods">
                                     <li>
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                     </li>
                                     <li>
-                                        <a href=""><img src="img/catalog/img-borodinski.jpg" width="358" height="578" alt="Изображение товара" /></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li>
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                    </li>
-                                    <li>
-                                        <a href=""><img src="img/catalog/img-mishki.jpg" width="358" height="578" alt="Изображение товара" /></a>
+                                        <a href=""><img src="img/catalog/img-borodinski.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <ul>
+                                <ul class="goods">
                                     <li>
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                     </li>
                                     <li>
-                                        <a href=""><img src="img/catalog/img-aplus.jpg" width="358" height="578" alt="Изображение товара" /></a>
+                                        <a href=""><img src="img/catalog/img-mishki.jpg" class="goods-image"  width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <ul>
+                                <ul class="goods">
                                     <li>
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                         <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
                                     </li>
                                     <li>
-                                        <a href=""><img src="img/catalog/img-kvast.jpg" width="358" height="578" alt="Изображение товара" /></a>
+                                        <a href=""><img src="img/catalog/img-aplus.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="goods">
+                                    <li>
+                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
+                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
+                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
+                                    </li>
+                                    <li>
+                                        <a href=""><img src="img/catalog/img-kvast.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
                             </li>
@@ -238,24 +243,12 @@
                     </section>
                 </div>
             </div>
+
             <section class="contacts">
                 <h2>Контакты</h2>
                 <h3>NЁRDS DESIGN STUDIO</h3>
                 <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург <a href="tel:+78005558628">+7 800 555-86-28</a></p>
                 <button type="button" class="button contacts-button">Напишите нам</button>
-            </section>
-
-            <section class="modal contacts-form">
-                <form action="https://echo.htmlacademy.ru" method="POST">
-                    <h2>Форма контактов</h2>
-                    <h3>Напишите нам</h3>
-
-                    <label> Ваше имя:<input id="name" type="text" value="Имя Фамилия" /> </label>
-                    <label> Ваш email: <input id="email" type="email" value="email@example.com" /> </label>
-                    <label> Текст письма: <input id="text" type="text" value="В свободной форме" /> </label>
-                    <input type="submit" class="button" value="отправить" />
-                </form>
-                <button class="modal-close" type="button">Закрыть</button>
             </section>
 
             <section class="map">
@@ -280,5 +273,20 @@
                 </div>
             </section>
         </footer>
+
+		  <section class="modal contacts-form">
+			<form action="https://echo.htmlacademy.ru" method="POST">
+				 <h2>Форма контактов</h2>
+				 <h3>Напишите нам</h3>
+
+				 <label> Ваше имя:<input id="name" type="text" value="Имя Фамилия" /> </label>
+				 <label> Ваш email: <input id="email" type="email" value="email@example.com" /> </label>
+				 <label> Текст письма: <input id="text" type="text" value="В свободной форме" /> </label>
+				 <input type="submit" class="button" value="отправить" />
+			</form>
+			<button class="modal-close" type="button">Закрыть</button>
+	  </section>
+
+
     </body>
 </html>
