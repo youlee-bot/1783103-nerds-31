@@ -203,6 +203,48 @@ body {
 	grid-template-columns: 400px 1fr;
 }
 
+.slider-pic {
+	position: relative;
+}
+
+.slider-controls {
+	position: absolute;
+	top:335px;
+	left:175px;
+	display: flex;
+	width: 88px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	z-index: 2;
+}
+
+.slider-button{
+	padding: 0;
+	height: 18px;
+	width: 18px;
+	background-color: var(--basic-white);
+	border: 0;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.current-slide {
+	cursor: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.current-slide::before {
+	display: block;
+	align-self:center;
+	content: "";
+	width:5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color:var(--basic-white);
+	border: 2px solid var(--basic-gray);
+}
+
 /*services*/
 
 .services {
@@ -377,7 +419,7 @@ a.title:active {
 	border: 2px solid var(--basic-input-border-hover);
 }
 
-.contacts-form input:focus {
+.contacts-form input:focus  {
 	border: 2px solid var(--basic-black);
 	opacity: 1;
 }
@@ -441,8 +483,12 @@ a.title:active {
 	background: linear-gradient(0deg, var(--basic-hover-button-red), var(--basic-hover-button-red)), var(--basic-white);
 }
 
+.social-button:active path{
+	fill: var(--basic-gray-button-pushed);
+}
+
 .social-button:active {
-	background: linear-gradient(0deg, var(----basic-push-button-red), var(----basic-push-button-red)), var(var(--basic-white));
+	background: linear-gradient(0deg, var(--basic-push-button-red), var(--basic-push-button-red)), var(var(--basic-white));
 	box-shadow: inset 0px 3px 0px var(--basic-shadow);
 }
 
