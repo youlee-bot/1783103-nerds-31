@@ -16,19 +16,21 @@
             <nav class="main-navigation">
                 <div class="main-header-navigation center">
                     <div class="header-logo">
-                        <a class="main-header-logo">
+                        <a class="main-header-logo" href="index.html">
                             <img src="img/logo.svg" alt="NЁRDS" width="160" height="66" />
                         </a>
                     </div>
                     <div class="header-menu">
-                        <ul class="site-navigation">
-                            <li><a href="blank.html">Студия</a></li>
-                            <li><a href="blank.html">Клиенты</a></li>
-                            <li><a href="catalog.html">Магазин</a></li>
-                            <li><a href="blank.html">Контакты</a></li>
-                        </ul>
+                        <div class="main-menu">
+                            <ul class="site-navigation">
+                                <li><a href="blank.html">Студия</a></li>
+                                <li><a href="blank.html">Клиенты</a></li>
+                                <li><a href="catalog.html" class="current-page">Магазин</a></li>
+                                <li><a href="blank.html">Контакты</a></li>
+                            </ul>
+                        </div>
                         <div class="user-navigation">
-                            <a href="blank.html" class="basket-link"><img src="img/cart.svg" width="15" height="11" alt="Иконка корзины" />Корзина</a>
+                            <a href="blank.html" class="basket-link">Корзина</a>
                         </div>
                     </div>
                 </div>
@@ -48,15 +50,22 @@
                                 <legend>Стоимость:</legend>
                                 <ul class="price-filter">
                                     <li>
-                                        <input type="range" id="price" name="price" min="0" max="15000" />
+                                        <div class="range-field">
+                                            <div class="range-bar">
+                                                <div class="green-bar">
+                                                    <div class="toggle toggle-min" tabindex="0"></div>
+                                                    <div class="toggle toggle-max" tabindex="0"></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li>
-                                        <label for="filter-from">ОТ</label>
-                                        <input type="text" name="from" id="filter-from" value="0" />
+                                        <label for="filter-from">От</label>
+                                        <input type="number" name="from" id="filter-from" value="0" />
                                     </li>
                                     <li>
-                                        <label for="filter-to">ДО</label>
-                                        <input type="text" name="to" id="filter-to" value="15000" />
+                                        <label for="filter-to">До</label>
+                                        <input type="number" name="to" id="filter-to" value="15000" />
                                     </li>
                                 </ul>
                             </fieldset>
@@ -64,43 +73,43 @@
                                 <legend>Сетка:</legend>
                                 <ul class="grid-type">
                                     <li>
-                                        <input type="radio" name="the-net" id="filter-adaptive" checked />
+                                        <input type="radio" class="visually-hidden filter-input-radio" name="the-net" id="filter-adaptive" checked />
                                         <label for="filter-adaptive">Адаптивная</label>
                                     </li>
 
                                     <li>
-                                        <input type="radio" name="the-net" id="filter-fixed" />
+                                        <input type="radio" class="visually-hidden filter-input-radio" name="the-net" id="filter-fixed" />
                                         <label for="filter-fixed">Фиксированная</label>
                                     </li>
 
                                     <li>
-                                        <input type="radio" name="the-net" id="filter-liquid" />
+                                        <input type="radio" class="visually-hidden filter-input-radio" name="the-net" id="filter-liquid" />
                                         <label for="filter-liquid">Резиновая</label>
                                     </li>
                                 </ul>
                             </fieldset>
 
                             <fieldset class="features-filter">
-                                <legend>Особенности</legend>
+                                <legend>Особенности:</legend>
                                 <ul class="features-filter">
                                     <li>
-                                        <input type="checkbox" name="slider" id="filter-slider" checked />
+                                        <input type="checkbox" class="visually-hidden filter-input-checkbox" name="slider" id="filter-slider" checked />
                                         <label for="filter-slider">Слайдер</label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="block-of-features" id="filter-block-of-features" />
+                                        <input type="checkbox" class="visually-hidden filter-input-checkbox" name="block-of-features" id="filter-block-of-features" />
                                         <label for="filter-block-of-features">Блок преимуществ</label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="news" id="filter-news" checked />
+                                        <input type="checkbox" class="visually-hidden filter-input-checkbox" name="news" id="filter-news" checked />
                                         <label for="filter-news">Новости</label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="gallery" id="filter-gallery" />
+                                        <input type="checkbox" class="visually-hidden filter-input-checkbox" name="gallery" id="filter-gallery" />
                                         <label for="filter-gallery">Галлерея</label>
                                     </li>
                                     <li>
-                                        <input type="checkbox" name="basket" id="filter-basket" />
+                                        <input type="checkbox" class="visually-hidden filter-input-checkbox" name="basket" id="filter-basket" />
                                         <label for="filter-basket">Корзина</label>
                                     </li>
                                 </ul>
@@ -114,59 +123,61 @@
                         <div class="flex-sort-by">
                             <span class="sort-span">Сортировать:</span>
                             <form class="form-surt-by" method="get" action="https://echo.htmlacademy.ru">
-                                <fieldset class="sort-by">
-                                    <ul class="sort-by">
-                                        <li>
-                                            <input type="radio" name="sort" id="by-price" checked />
-                                            <label for="by-price">По цене</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="sort" id="by-type" />
-                                            <label for="by-type">По типу</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="sort" id="by-name" />
-                                            <label for="by-name">По названию</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="sort" id="by-up" />
-                                            <label for="by-up"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Up" /></label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" name="sort" id="by-down" />
-                                            <label for="by-down"><img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Down" /></label>
-                                        </li>
-                                    </ul>
-                                </fieldset>
+                                <div class="sort-grid">
+                                    <fieldset class="sort-by">
+                                        <ul class="sort-by">
+                                            <li>
+                                                <input type="radio" class="visually-hidden" name="sort" id="by-price" checked />
+                                                <label for="by-price">По цене</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" class="visually-hidden" name="sort" id="by-type" />
+                                                <label for="by-type">По типу</label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" class="visually-hidden" name="sort" id="by-name" />
+                                                <label for="by-name">По названию</label>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                    <fieldset class="sort-icons-fieldset">
+                                        <ul class="sort-icons">
+                                            <li>
+                                                <input type="radio" class="visually-hidden" name="sort-icon" id="by-up" checked />
+                                                <label for="by-up" class="up-triangle"></label>
+                                            </li>
+                                            <li>
+                                                <input type="radio" class="visually-hidden" name="sort-icon" id="by-down" />
+                                                <label for="by-down" class="down-triangle"></label>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                </div>
                             </form>
                         </div>
                         <h2 class="visually-hidden">Каталог товаров</h2>
                         <ul class="catalog-content">
                             <li>
                                 <ul class="product-container">
-                                    <li class="hovered">
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
+                                    <li class="container-header">
+                                        <div class="three-circles"></div>
                                     </li>
-                                    <li>
+                                    <li class="container-content">
                                         <a href=""><img src="img/catalog/img-sedona.jpg" class="goods-image" width="358" height="578" alt="Изобраение товара" /></a>
                                     </li>
-                                    <li>
-                                        <p class="catalog-title">Sedona</p>
-                                        <p class="description">Информационный сайт для туристов</p>
-                                        <button type="button" class="button">9 900 ₽</button>
+                                    <li class="order-container">
+                                        <p class="product-title">Sedona</p>
+                                        <p class="product-description">Информационный сайт для туристов</p>
+                                        <button type="button" class="button product-button">9 900 ₽</button>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <ul class="goods">
-                                    <li>
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
+                                <ul class="product-container">
+                                    <li class="container-header">
+                                        <div class="three-circles"></div>
                                     </li>
-                                    <li>
+                                    <li class="container-content">
                                         <a href=""><img src="img/catalog/img-pink.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                     <li>
@@ -177,49 +188,41 @@
                                 </ul>
                             </li>
                             <li>
-                                <ul class="goods">
-                                    <li>
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
+                                <ul class="product-container">
+                                    <li class="container-header">
+                                        <div class="three-circles"></div>
                                     </li>
-                                    <li>
+                                    <li class="container-content">
                                         <a href=""><img src="img/catalog/img-borodinski.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <ul class="goods">
-                                    <li>
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
+                                <ul class="product-container">
+                                    <li class="container-header">
+                                        <div class="three-circles"></div>
                                     </li>
-                                    <li>
+                                    <li class="container-content">
                                         <a href=""><img src="img/catalog/img-mishki.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <ul class="goods">
-                                    <li>
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
+                                <ul class="product-container">
+                                    <li class="container-header">
+                                        <div class="three-circles"></div>
                                     </li>
-                                    <li>
+                                    <li class="container-content">
                                         <a href=""><img src="img/catalog/img-aplus.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <ul class="goods">
-                                    <li>
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
-                                        <img src="https://via.placeholder.com/14x14" width="14" height="14" alt="Декоративный элемент круг" />
+                                <ul class="product-container">
+                                    <li class="container-header">
+                                        <div class="three-circles"></div>
                                     </li>
-                                    <li>
+                                    <li class="container-content">
                                         <a href=""><img src="img/catalog/img-kvast.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
@@ -227,33 +230,33 @@
                         </ul>
                         <ul class="pagination">
                             <li>
-                                <a href="" class="gray-button current">1</a>
+                                <a href="" class="button current">1</a>
                             </li>
                             <li>
-                                <a href="#" class="gray-button">2</a>
+                                <a href="#" class="button page-button">2</a>
                             </li>
                             <li>
-                                <a href="#" class="gray-button">3</a>
+                                <a href="#" class="button page-button">3</a>
                             </li>
                             <li>
-                                <a href="#" class="gray-button">Следующая</a>
+                                <a href="#" class="button next-page-button">Следующая</a>
                             </li>
                         </ul>
                     </section>
                 </div>
             </div>
-
-            <section class="contacts">
-                <h2>Контакты</h2>
-                <h3>NЁRDS DESIGN STUDIO</h3>
-                <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург <a href="tel:+78005558628">+7 800 555-86-28</a></p>
-                <button type="button" class="button contacts-button">Напишите нам</button>
-            </section>
-
             <section class="map">
-                <h2>Карта</h2>
-                <img src="img/map.jpg" width="1440" height="416" alt="карта" class="map-image" />
+                <h2 class="visually-hidden">Карта</h2>
                 <img src="img/map-marker.png" width="231" height="190" alt="логотип" class="map-logo" />
+                <div class="contacts">
+                    <h3>NЁRDS DESIGN STUDIO</h3>
+                    <p>
+                        наб. Реки Карповки,<br />
+                        5 лит П, Санкт-Петербург
+                    </p>
+                    <div class="tel"><a href="tel:+78005558628">+7 800 555-86-28</a></div>
+                    <button type="button" class="button contacts-button">Напишите нам</button>
+                </div>
             </section>
         </main>
 
@@ -261,9 +264,29 @@
             <section class="footer-content">
                 <div class="footer-container center">
                     <div class="footer-social">
-                        <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="vk" /></a>
-                        <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="facebook" /></a>
-                        <a href="#" class="social-button"><img src="https://via.placeholder.com/81x81" width="81" height="81" alt="instagram" /></a>
+                        <a href="#" class="social-button">
+                            <span class="visually-hidden">Вконтакте</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="15" fill="none">
+                                <path
+                                    d="M16.138 11.51c.956-.309 2.18 2.04 3.483 2.939.978.681 1.727.534 1.727.534l3.473-.05s1.815-.112.957-1.554c-.071-.12-.503-1.069-2.585-3.022-2.177-2.043-1.882-1.712.739-5.244 1.597-2.153 2.236-3.468 2.036-4.028-.192-.539-1.365-.399-1.365-.399L20.69.713c-.381.001-.704.119-.851.515-.003.004-.621 1.666-1.445 3.079-1.741 2.989-2.436 3.148-2.724 2.961-.661-.433-.494-1.737-.494-2.664 0-2.897.432-4.105-.846-4.417-.427-.104-.739-.172-1.828-.182-1.392-.021-2.574 0-3.244.329-.445.223-.786.712-.579.74.26.035.843.16 1.155.586.401.552.389 1.789.389 1.789s.229 3.411-.54 3.834c-.528.29-1.25-.302-2.803-3.016-.793-1.388-1.392-2.922-1.392-2.922s-.116-.285-.326-.441c-.25-.185-.6-.244-.6-.244L.848.684S.29.7.085.946c-.182.218-.015.668-.015.668s2.909 6.881 6.203 10.347c3.02 3.182 6.452 2.971 6.452 2.971h1.555s.469-.054.709-.312c.224-.24.214-.691.214-.691s-.031-2.109.935-2.419z"
+                                    fill="#fff"
+                                />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-button">
+                            <span class="visually-hidden">facebook</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" fill="none"><path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff" /></svg>
+                        </a>
+                        <a href="#" class="social-button">
+                            <span class="visually-hidden">instagram</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M3 0h15a3.01 3.01 0 0 1 3 3v15a3.01 3.01 0 0 1-3 3H3a3.01 3.01 0 0 1-3-3V3a3.01 3.01 0 0 1 3-3zm11 10.5C14 8.57 12.43 7 10.5 7S7 8.57 7 10.5 8.57 14 10.5 14s3.5-1.57 3.5-3.5zM3 18V9h1.181c-.118.491-.179.995-.181 1.5a6.5 6.5 0 1 0 13 0 6.45 6.45 0 0 0-.181-1.5H18v9H3zM14 7h4V3h-4v4z"
+                                    fill="#fff"
+                                />
+                            </svg>
+                        </a>
                     </div>
                     <div class="footer-text">
                         <h2>Давайте дружить, это выгодно!</h2>
