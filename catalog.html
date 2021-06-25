@@ -124,7 +124,9 @@
                             <span class="sort-span">Сортировать:</span>
                             <form class="form-surt-by" method="get" action="https://echo.htmlacademy.ru">
                                 <div class="sort-grid">
-                                    <fieldset class="sort-by">
+
+										  <fieldset class="sort-by">
+
                                         <ul class="sort-by">
                                             <li>
                                                 <input type="radio" class="visually-hidden" name="sort" id="by-price" checked />
@@ -139,11 +141,11 @@
                                                 <label for="by-name">По названию</label>
                                             </li>
                                         </ul>
-                                    </fieldset>
-                                    <fieldset class="sort-icons-fieldset">
+													</fieldset>
+													 <fieldset class="sort-icons-fieldset">
                                         <ul class="sort-icons">
                                             <li>
-                                                <input type="radio" class="visually-hidden" name="sort-icon" id="by-up" checked />
+                                                <input type="radio" class="visually-hidden" name="sort-icon" id="by-up" checked/>
                                                 <label for="by-up" class="up-triangle"></label>
                                             </li>
                                             <li>
@@ -151,16 +153,18 @@
                                                 <label for="by-down" class="down-triangle"></label>
                                             </li>
                                         </ul>
-                                    </fieldset>
-                                </div>
+													</fieldset>
+                                    </div>
+
                             </form>
                         </div>
                         <h2 class="visually-hidden">Каталог товаров</h2>
                         <ul class="catalog-content">
                             <li>
-                                <ul class="product-container">
+
+										   <ul class="product-container">
                                     <li class="container-header">
-                                        <div class="three-circles"></div>
+													<div class="three-circles"></div>
                                     </li>
                                     <li class="container-content">
                                         <a href=""><img src="img/catalog/img-sedona.jpg" class="goods-image" width="358" height="578" alt="Изобраение товара" /></a>
@@ -173,11 +177,11 @@
                                 </ul>
                             </li>
                             <li>
-                                <ul class="product-container">
-                                    <li class="container-header">
-                                        <div class="three-circles"></div>
-                                    </li>
-                                    <li class="container-content">
+										<ul class="product-container">
+											<li class="container-header">
+												<div class="three-circles"></div>
+											</li>
+											<li class="container-content">
                                         <a href=""><img src="img/catalog/img-pink.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                     <li>
@@ -188,41 +192,41 @@
                                 </ul>
                             </li>
                             <li>
-                                <ul class="product-container">
-                                    <li class="container-header">
-                                        <div class="three-circles"></div>
-                                    </li>
-                                    <li class="container-content">
+										<ul class="product-container">
+											<li class="container-header">
+												<div class="three-circles"></div>
+											</li>
+											<li class="container-content">
                                         <a href=""><img src="img/catalog/img-borodinski.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <ul class="product-container">
-                                    <li class="container-header">
-                                        <div class="three-circles"></div>
-                                    </li>
-                                    <li class="container-content">
+										<ul class="product-container">
+											<li class="container-header">
+												<div class="three-circles"></div>
+											</li>
+											<li class="container-content">
                                         <a href=""><img src="img/catalog/img-mishki.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <ul class="product-container">
-                                    <li class="container-header">
-                                        <div class="three-circles"></div>
-                                    </li>
-                                    <li class="container-content">
+										<ul class="product-container">
+											<li class="container-header">
+												<div class="three-circles"></div>
+											</li>
+											<li class="container-content">
                                         <a href=""><img src="img/catalog/img-aplus.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <ul class="product-container">
-                                    <li class="container-header">
-                                        <div class="three-circles"></div>
-                                    </li>
-                                    <li class="container-content">
+										<ul class="product-container">
+											<li class="container-header">
+												<div class="three-circles"></div>
+											</li>
+											<li class="container-content">
                                         <a href=""><img src="img/catalog/img-kvast.jpg" class="goods-image" width="358" height="578" alt="Изображение товара" /></a>
                                     </li>
                                 </ul>
@@ -296,17 +300,33 @@
             </section>
         </footer>
 
-        <section class="modal contacts-form">
-            <form action="https://echo.htmlacademy.ru" method="POST">
-                <h2>Форма контактов</h2>
-                <h3>Напишите нам</h3>
+		  <section class="contacts-form center">
+			<h2 class="visually-hidden">Форма контактов</h2>
+			<h3>Напишите нам</h3>
+			 <form class="form-content" action="https://echo.htmlacademy.ru" method="POST">
 
-                <label> Ваше имя:<input id="name" type="text" value="Имя Фамилия" /> </label>
-                <label> Ваш email: <input id="email" type="email" value="email@example.com" /> </label>
-                <label> Текст письма: <input id="text" type="text" value="В свободной форме" /> </label>
-                <input type="submit" class="button" value="отправить" />
-            </form>
-            <button class="modal-close" type="button">Закрыть</button>
-        </section>
+				  <ul class="modal-form-content">
+						<li>
+							<label for="your-name">Ваше имя:</label>
+							 <input class="field" id="name" type="text" value="Имя Фамилия" name="your-name" />
+
+						</li>
+						<li>
+							<label for="your-email">Ваш email:</label>
+							 <input class="field" id="email" type="email" value="email@example.com" name="your-email" />
+
+						</li>
+						<li>
+							 <label for="text-of-letter">Текст письма:</label>
+							 <textarea placeholder="В свободной форме" cols="96" rows="5"></textarea>
+
+						</li>
+
+				  </ul>
+				  <input type="submit" class="button modal-button" value="отправить" />
+				  <button class="modal-close" type="button" aria-label="Закрыть"></button>
+			 </form>
+
+		</section>
     </body>
 </html>

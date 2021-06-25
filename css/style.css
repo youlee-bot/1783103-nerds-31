@@ -32,6 +32,8 @@
 	--basic-container-border: rgba(0, 0, 0, 0.1);
 	--basic-navigation: #DBDBDB;
 	--basic-graybutton-color: #969696;
+	--basic-contacts-shadow: rgba(0, 0, 0, 0.4);
+	--basic-close-button: #FECDCE;
 }
 
 body {
@@ -90,6 +92,7 @@ body {
 .sort-by,
 .features-list,
 .pagination,
+.modal-form-content,
 .product-container {
 	list-style: none;
 	margin: 0;
@@ -103,6 +106,7 @@ body {
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
 	align-content: start;
+	position: relative;
 }
 
 .center {
@@ -212,6 +216,7 @@ body {
 	display: inline-block;
 	margin-top: 38px;
 	padding: 17px 54px 15px 54px;
+	margin-bottom: 20px;
 }
 
 .slider h3 {
@@ -244,6 +249,15 @@ body {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	z-index: 2;
+}
+
+.slider-content {
+	margin-bottom: -5px;
+}
+
+.slider-content img {
+	width: 760px;
+	height: 431px;
 }
 
 .slider-button {
@@ -373,14 +387,14 @@ a.title:active {
 	position: relative;
 }
 
-.features h1 {
+.features h3 {
 	font-weight: 500;
 	font-size: 45px;
 	line-height: 45px;
 	margin-bottom: 32px;
 }
 
-.features h2 {
+.features h4 {
 	text-transform: uppercase;
 	font-weight: bold;
 	margin-top: 40px;
@@ -394,6 +408,21 @@ a.title:active {
 	width: 1158px;
 	height: 2px;
 	background-color: var(--basic-medium-gray);
+}
+
+.features-list li {
+	position: relative;
+	padding-left: 32px;
+}
+
+.features-list li::before {
+	position: absolute;
+	content: "";
+	width: 25px;
+	height: 2px;
+	background-color: var(--basic-red);
+	left: 0;
+	top: 11px;
 }
 
 /*about*/
@@ -431,7 +460,8 @@ a.title:active {
 .customers-list {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	flex-wrap: wrap;
+	align-items: flex-start;
 	margin: 0;
 	padding: 0;
 }
@@ -449,20 +479,22 @@ a.title:active {
 }
 
 .customers-list li {
+	padding-top: 10px;
 	display: flex;
 	justify-content: center;
-	width: 100%;
+	min-width: 290px;
 	position: relative;
+	align-self: center;
 }
 
-.customers-list li:not(:first-child)::before {
+.customers-list li:not(:nth-child(4n+4))::after {
 	content: "";
 	align-self: center;
 	width: 2px;
 	height: 52px;
 	background-color: var(--basic-medium-gray);
 	position: absolute;
-	left: 0;
+	right: 0;
 }
 
 .customers::after {
@@ -472,54 +504,6 @@ a.title:active {
 	width: 1158px;
 	height: 2px;
 	background-color: var(--basic-medium-gray);
-}
-
-/*contants*/
-
-.contacts h3 {
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 30px;
-}
-
-.contacts p {
-	font-size: 16px;
-	line-height: 18px;
-	color: var(--special);
-}
-
-.contacts a {
-	text-decoration: none;
-	color: var(--special);
-}
-
-/*contacts form*/
-
-.contacts-form h3 {
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 30px;
-}
-
-.contacts-form input[type="text"],
-.contacts-form input[type="email"] {
-	border: 2px solid var(--basic-input-border);
-	opacity: 0.5;
-}
-
-.contacts-form input:hover {
-	border: 2px solid var(--basic-input-border-hover);
-}
-
-.contacts-form input:focus {
-	border: 2px solid var(--basic-black);
-	opacity: 1;
-}
-
-.contacts-form input:invalid {
-	border: 2px solid var(--basic-hover-button-red);
-	color: var(--basic-hover-button-red);
-	opacity: 1;
 }
 
 /*map*/
@@ -545,7 +529,7 @@ a.title:active {
 /*contacts*/
 
 .contacts {
-	height: 249px;
+	min-height: 249px;
 	width: 232px;
 	background-color: var(--basic-white);
 	position: absolute;
@@ -569,6 +553,12 @@ a.title:active {
 .contacts p {
 	font-size: 16px;
 	line-height: 18px;
+	color: var(--special);
+}
+
+.contacts a {
+	text-decoration: none;
+	color: var(--special);
 }
 
 .contacts-button:hover {
@@ -1031,16 +1021,9 @@ fieldset.sort-icons-fieldset {
 
 .pagination {
 	display: flex;
-	justify-content: space-between;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 }
-
-/*
-	width:50px;
-	height:50px;
-	box-sizing: border-box;
-*/
 
 .page-button {
 	display: inline-block;
@@ -1049,6 +1032,10 @@ fieldset.sort-icons-fieldset {
 	border-radius: 3px;
 	color: var(--basic-black);
 	margin-right: 11px;
+}
+
+.pagination li {
+	margin-top: 5px;
 }
 
 .current {
@@ -1093,11 +1080,139 @@ fieldset.sort-icons-fieldset {
 	color: var(--basic-graybutton-color);
 }
 
+/*modal window*/
+
+.contacts-form {
+	display: none;
+	position: absolute;
+	bottom: 180px;
+	left: 0;
+	right: 0;
+	height: 443px;
+	width: 760px;
+	padding: 63px 100px 84px 101px;
+	background-color: var(--basic-white);
+	z-index: 2;
+	box-shadow: 0px 20px 40px var(--basic-contacts-shadow);
+}
+
+.contacts-form h3 {
+	font-weight: bold;
+	font-size: 45px;
+	line-height: 53px;
+	padding: 0;
+	margin-bottom: 27px;
+}
+
+.modal-form-content {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.modal-form-content li {
+	width: 360px;
+}
+
+.modal-form-content label {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.modal-form-content textarea {
+	resize: none;
+	margin-bottom: 47px;
+	border: 2px solid var(--basic-input-border);
+	box-sizing: border-box;
+	border-radius: 3px;
+	width: 760px;
+	color: var(--basic-black);
+	opacity: 0.5;
+}
+
+.contacts-form .field {
+	width: 360px;
+	height: 50px;
+	border: 2px solid var(--basic-input-border);
+	box-sizing: border-box;
+	border-radius: 3px;
+	margin-top: 9px;
+	margin-bottom: 29px;
+	opacity: 0.5;
+}
+
+.modal-button {
+	padding: 17px 83px 15px 83px;
+	border: none;
+}
+
+.modal-button:hover {
+	background-color: var(--basic-hover-button-red);
+}
+
+.modal-button:active {
+	background-color: var(--basic-push-button-red);
+	box-shadow: inset 0px 3px 0px var(--basic-shadow);
+}
+
+.modal-form-content input:hover,
+.modal-form-content textarea:hover {
+	border: 2px solid var(--basic-input-border-hover);
+}
+
+.modal-form-content input:focus,
+.modal-form-content textarea:focus {
+	border: 2px solid var(--basic-black);
+	opacity: 1;
+}
+
+.modal-form-content input:invalid,
+.modal-form-content textarea:invalid {
+	border: 2px solid var(--basic-hover-button-red);
+	color: var(--basic-hover-button-red);
+	opacity: 1;
+}
+
+.form-content {
+	position: relative;
+}
+
+.modal-close {
+	border: none;
+	background-color: var(--basic-white);
+	position: absolute;
+	right: -15px;
+	top: -100px;
+	width: 21px;
+	height: 21px;
+	z-index: 2;
+}
+
+.modal-close::before,
+.modal-close::after {
+	position: absolute;
+	left: -3px;
+	top: 9px;
+	content: "";
+	width: 27px;
+	height: 4px;
+	background-color: var(--basic-close-button);
+	transform: rotate(45deg);
+	border-radius: 1px;
+	overflow: hidden;
+}
+
+.modal-close::after {
+	transform: rotate(135deg)
+}
+
 /*footer*/
 
 .footer-container {
 	display: grid;
 	grid-template-columns: 388px 1fr;
+	align-items: center;
 }
 
 .footer-content h2 {

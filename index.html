@@ -38,6 +38,7 @@
         </header>
 
         <main class="container">
+            <h1 class="visually-hidden">HTML Academy: Нёрдс</h1>
             <section class="slider">
                 <div class="slider-container center">
                     <div class="slider-description">
@@ -55,13 +56,13 @@
 
                         <figure class="slider-content visually-hidden">
                             <a href="#">
-                                <img src="img/slide1.png" width="760" height="431" alt="Слайдер" />
+                                <img src="img/slide2.png" width="760" height="431" alt="Слайдер" />
                             </a>
                         </figure>
 
                         <figure class="slider-content visually-hidden">
                             <a href="#">
-                                <img src="img/slide1.png" width="760" height="431" alt="Слайдер" />
+                                <img src="img/slide3.png" width="760" height="431" alt="Слайдер" />
                             </a>
                         </figure>
 
@@ -114,9 +115,10 @@
 
             <div class="features-container center">
                 <section class="features">
-                    <h1>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h1>
+                    <h2 class="visually-hidden">Преимущества</h2>
+                    <h3>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h3>
                     <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчетпревыше креатива. Работаем не покладая рук, как роботы.</p>
-                    <h2>Выполняем заказы на разработку:</h2>
+                    <h4>Выполняем заказы на разработку:</h4>
 
                     <ul class="features-list">
                         <li>
@@ -219,18 +221,27 @@
                 </div>
             </section>
         </footer>
-
-        <section class="modal contacts-form">
-            <form action="https://echo.htmlacademy.ru" method="POST">
-                <h2>Форма контактов</h2>
-                <h3>Напишите нам</h3>
-
-                <label> Ваше имя:<input id="name" type="text" value="Имя Фамилия" /> </label>
-                <label> Ваш email: <input id="email" type="email" value="email@example.com" /> </label>
-                <label> Текст письма: <input id="text" type="text" value="В свободной форме" /> </label>
-                <input type="submit" class="button" value="отправить" />
+        <section class="contacts-form center">
+            <h2 class="visually-hidden">Форма контактов</h2>
+            <h3>Напишите нам</h3>
+            <form class="form-content" action="https://echo.htmlacademy.ru" method="POST">
+                <ul class="modal-form-content">
+                    <li>
+                        <label for="your-name">Ваше имя:</label>
+                        <input class="field" id="name" type="text" value="Имя Фамилия" name="your-name" />
+                    </li>
+                    <li>
+                        <label for="your-email">Ваш email:</label>
+                        <input class="field" id="email" type="email" value="email@example.com" name="your-email" />
+                    </li>
+                    <li>
+                        <label for="text-of-letter">Текст письма:</label>
+                        <textarea placeholder="В свободной форме" cols="96" rows="5"></textarea>
+                    </li>
+                </ul>
+                <input type="submit" class="button modal-button" value="отправить" />
+                <button class="modal-close" type="button" aria-label="Закрыть"></button>
             </form>
-            <button class="modal-close" type="button">Закрыть</button>
         </section>
     </body>
 </html>
